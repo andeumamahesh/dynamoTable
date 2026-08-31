@@ -675,12 +675,13 @@ value: (o = d(s().mark((function t(e) {
                 // DESTROY FIRST
                 if (u._dataTable) {
                     try {
-                        u._dataTable.destroy();
+                        //u._dataTable.destroy();
+                        u._dataTable = null;
                     } catch (err) {
                         console.error("Destroy error:", err);
                     }
 
-                    u._dataTable = null;
+                    
                 }
 
                 var table = u._shadowRoot.querySelector("#myTable");
