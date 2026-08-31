@@ -659,23 +659,90 @@
                 this._tableTitle.textContent = this._props.tableTitle
             }
         }, {
-            key: "setTableData",
-            value: (o = d(s().mark((function t(e) {
-                var n, r, o, i, a, c, u = this;
-                return s().wrap((function (t) {
-                    for (; ;) switch (t.prev = t.next) {
-                        case 0:
-                            n = e, r = this._shadowRoot.querySelector("#myTable"), o = r.querySelector("thead"), i = r.querySelector("tbody"), o || (o = document.createElement("thead"), r.appendChild(o)), i || (i = document.createElement("tbody"), r.appendChild(i)), o.id = "tableHeader", i.id = "tableBody", o.innerHTML = "", i.innerHTML = "", a = Object.keys(n[0]), c = document.createElement("tr"), a.forEach((function (t) {
-                                var e = document.createElement("th");
-                                e.textContent = t.charAt(0).toUpperCase() + t.slice(1), c.appendChild(e)
-                            })), o.appendChild(c), n.forEach((function (t) {
-                                var e = document.createElement("tr");
-                                a.forEach((function (n) {
-                                    var r = document.createElement("td");
-                                    r.textContent = t[n], e.appendChild(r)
-                                })), i.appendChild(e)
-                            })), console.log(window), setTimeout((function () {
-                                try {
+           key: "setTableData",
+value: (o = d(s().mark((function t(e) {
+    var u = this;
+
+    return s().wrap((function (t) {
+        for (;;) switch (t.prev = t.next) {
+            case 0:
+
+                if (!e || !Array.isArray(e) || e.length === 0) {
+                    console.warn("No data received");
+                    return t.stop();
+                }
+
+                // DESTROY FIRST
+                if (u._dataTable) {
+                    try {
+                        u._dataTable.destroy();
+                    } catch (err) {
+                        console.error("Destroy error:", err);
+                    }
+
+                    u._dataTable = null;
+                }
+
+                var table = u._shadowRoot.querySelector("#myTable");
+
+                if (!table) {
+                    console.error("Table not found");
+                    return t.stop();
+                }
+
+                var thead = table.querySelector("thead");
+                var tbody = table.querySelector("tbody");
+
+                if (!thead) {
+                    thead = document.createElement("thead");
+                    table.appendChild(thead);
+                }
+
+                if (!tbody) {
+                    tbody = document.createElement("tbody");
+                    table.appendChild(tbody);
+                }
+
+                thead.innerHTML = "";
+                tbody.innerHTML = "";
+
+                var columns = Object.keys(e[0]);
+
+                var headerRow = document.createElement("tr");
+
+                columns.forEach(function (col) {
+                    var th = document.createElement("th");
+                    th.textContent =
+                        col.charAt(0).toUpperCase() + col.slice(1);
+                    headerRow.appendChild(th);
+                });
+
+                thead.appendChild(headerRow);
+
+                e.forEach(function (row) {
+
+                    var tr = document.createElement("tr");
+
+                    columns.forEach(function (col) {
+
+                        var td = document.createElement("td");
+
+                        td.textContent =
+                            row[col] == null
+                                ? ""
+                                : row[col];
+
+                        tr.appendChild(td);
+
+                    });
+
+                    tbody.appendChild(tr);
+
+                });
+
+                setTimeout(function () {
+
+                    try {
 
                         u._dataTable =
                             new window.simpleDatatables.DataTable(
@@ -692,15 +759,16 @@
 
                     }
 
-                            }), 2e3);
-                        case 17:
-                        case "end":
-                            return t.stop()
-                    }
-                }), t, this)
-            }))), function (t) {
-                return o.apply(this, arguments)
-            })
+                }, 100);
+
+            case 1:
+            case "end":
+                return t.stop();
+        }
+    }), t, this);
+}))), function (t) {
+    return o.apply(this, arguments);
+})
         }], r && y(n.prototype, r), Object.defineProperty(n, "prototype", {
             writable: !1
         }), n;
