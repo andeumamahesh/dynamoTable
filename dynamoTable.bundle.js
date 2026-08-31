@@ -675,14 +675,23 @@
                                     r.textContent = t[n], e.appendChild(r)
                                 })), i.appendChild(e)
                             })), console.log(window), setTimeout((function () {
-                                if (u._dataTable) {
-                                    u._dataTable.destroy();
-                                }
-                                u._dataTable =
-                                    new window.simpleDatatables.DataTable(
-                                        u._myTable,
-                                        {}
-                                    );
+                                try {
+
+                        u._dataTable =
+                            new window.simpleDatatables.DataTable(
+                                table,
+                                {}
+                            );
+
+                    } catch (err) {
+
+                        console.error(
+                            "DataTable initialization failed",
+                            err
+                        );
+
+                    }
+
                             }), 2e3);
                         case 17:
                         case "end":
