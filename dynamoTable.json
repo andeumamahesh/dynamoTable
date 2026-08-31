@@ -1,7 +1,7 @@
 {
   "id": "com.mahesh.dynamoTable",
   "name": "Dynamo Table",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "A custom widget to help you create custom tables.",
   "newInstancePrefix": "dynamoTable",
   "vendor": "umamahesh.com",
@@ -16,16 +16,16 @@
     {
       "kind": "main",
       "tag": "dynamo-table",
-      "url": "https://cdn.jsdelivr.net/gh/andeumamahesh/dynamoTable@1.0.0/dynamoTable.bundle.js",
+      "url": "https://cdn.jsdelivr.net/gh/andeumamahesh/dynamoTable@1.0.3/dynamoTable.bundle.js",
       "integrity": "sha256-wiICihZPi2ziYCTh6siychY44S/MueIPFO2ElctCI8g=",
-      "ignoreIntegrity": false
+      "ignoreIntegrity": true
     },
     {
       "kind": "builder",
       "tag": "dynamo-table-builder",
-      "url": "https://cdn.jsdelivr.net/gh/andeumamahesh/dynamoTable@1.0.0/dynamoTable.bundle.js",
+      "url": "https://cdn.jsdelivr.net/gh/andeumamahesh/dynamoTable@1.0.3/dynamoTable.bundle.js",
       "integrity": "sha256-wiICihZPi2ziYCTh6siychY44S/MueIPFO2ElctCI8g=",
-      "ignoreIntegrity": false
+      "ignoreIntegrity": true
     }
   ],
   "properties": {
