@@ -748,7 +748,9 @@ value: (o = d(s().mark((function t(e) {
                         u._dataTable =
                             new window.simpleDatatables.DataTable(
                                 table,
-                                {}
+                                {
+                                    perPage: 25
+                                }
                             );
 
                     } catch (err) {
