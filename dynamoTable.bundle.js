@@ -749,7 +749,8 @@ value: (o = d(s().mark((function t(e) {
                             new window.simpleDatatables.DataTable(
                                 table,
                                 {
-                                    perPage: 25
+                                    perPage: 25,
+                                    searchable: false
                                 }
                             );
 
