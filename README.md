@@ -53,4 +53,4 @@ dynamoTable_1.setTableData(data);
 ![preview](https://raw.githubusercontent.com/SAP-Custom-Widget/dynamoTable/main/screenshot1.PNG)
 
 ## About
-This sac-p custom widget is developed by [Rohit Chouhan](http://linkedin.com/in/itsrohitchouhan "Rohit Chouhan"), Follow me on Linkedin [@itsrohitchouhan](http://linkedin.com/in/itsrohitchouhan "@itsrohitchouhan")
+
