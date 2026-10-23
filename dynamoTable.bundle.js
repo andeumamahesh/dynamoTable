@@ -606,18 +606,7 @@
     } (c = document.createElement("script")).src = "https://cdn.jsdelivr.net/npm/simple-datatables@9.0.0", document.head.appendChild(c);
     var x = document.createElement("template");
     x.innerHTML = '\n<style>\n@import "https://fiduswriter.github.io/simple-datatables/demos/dist/css/style.css";
-    \n.card {\n    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);\n    border-radius:10px;\n}\n\n\n
-        #tableTitle {
-    display: none !important;
-}
-
-.datatable-top {
-    display: none !important;
-}
-
-.datatable-bottom {
-    display: none !important;
-}</style>\n<div class="container" style="padding: 20px;">\n<div class="card" style="padding: 20px;">\n    <h3 id="tableTitle"></h3>\n    <table id="myTable" class="table table-striped table-bordered" style="width:100%">\n        <thead id="tableHeader">\n        </thead>\n        <tbody id="tableBody">\n        </tbody>\n    </table>\n</div>\n</div>';
+    \n.card {\n    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);\n    border-radius:10px;\n}\n\n\n</style>\n<div class="container" style="padding: 20px;">\n<div class="card" style="padding: 20px;">\n    <h3 id="tableTitle"></h3>\n    <table id="myTable" class="table table-striped table-bordered" style="width:100%">\n        <thead id="tableHeader">\n        </thead>\n        <tbody id="tableBody">\n        </tbody>\n    </table>\n</div>\n</div>';
     var O = function (t) {
         function e() {
             var t, n, r, o;
