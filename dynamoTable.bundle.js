@@ -751,7 +751,11 @@ value: (o = d(s().mark((function t(e) {
                                 table,
                                 {
                                     perPage: 25,
-                                    searchable: false
+                                    searchable: false,
+                                    perPageSelect: false,   // <-- removes the "25 entries per page" dropdown
+                                    labels: {
+                                        info: ""             // <-- removes "Showing 1 to 4 of 4 entries"
+                                    }
                                 }
                             );
 
